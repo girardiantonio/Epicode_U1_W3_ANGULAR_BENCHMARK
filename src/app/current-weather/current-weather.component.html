@@ -1,0 +1,45 @@
+<div class="cardmod text-center m-5">
+  <h1>Current Weather</h1>
+  <div class="card" style="color: #4b515d; border-radius: 35px">
+    <div class="card-body p-4">
+      <div class="d-flex">
+        <h3 class="flex-grow-1">
+          {{ current.city }}
+        </h3>
+      </div>
+      <h5>{{ getFormattedDate() }}</h5>
+      <div class="d-flex flex-column text-center mt-5 mb-4">
+        <h4 class="display-4 mb-0 font-weight-bold" style="color: #1c2331">
+          {{ current.temperature | number : "1.0-0" }} °C
+        </h4>
+        <h3 style="color: #868b94">{{ current.description }}</h3>
+      </div>
+      <div>
+        <img
+          src={{current.image}}
+          width="120px"
+        />
+      </div>
+      <div class="d-flex align-items-center mt-3">
+        <div class="flex-grow-1" style="font-size: 1rem">
+          <div>
+            <i class="fas fa-wind fa-fw" style="color: #868b94"></i>
+            <span class="ms-1"> 40 km/h </span>
+          </div>
+          <div>
+            <i class="fas fa-tint fa-fw" style="color: #868b94"></i>
+            <span class="ms-1"> 84% </span>
+          </div>
+          <div>
+            <i class="fas fa-sun fa-fw" style="color: #868b94"></i>
+            <span class="ms-1"> 0.2h </span>
+          </div>
+        </div>
+      </div>
+
+      <div class="card-body">
+        <a href="#" class="card-link">Save to favorites</a>
+      </div>
+    </div>
+  </div>
+</div>
